@@ -32,6 +32,17 @@ margin-bottom: 20px;
 /* background-color: #f1f1f1; */
 margin-left: 20px;
 }
+/* #song {
+    display: flex;
+    border-radius: 20px;
+    background-color: #3AFFB0;
+    padding: 20px;
+    margin-bottom: 20px;
+    }
+    
+    #song > div {
+    margin-left: 20px;
+    } */
 #player {
     display: none;
 }

@@ -21,22 +21,17 @@ async function getSong(id) {
         ytid = element.url.split('=')[1];
       }
     });
-
-
-    // const ytid = data.response.song.media[1].url.split('=')[1];
-    // const url = data.response.song.url;
     console.log(ytid);
     const string = `
     <img src="${img}" alt="cover image">
     <div>
         <h1>${title}</h1>
-    </div>
-    <button onclick="play()">play</button>
-    <button onclick="pause()">pause</button>`
-    
-    
-    let showResults = document.querySelector("#song");
+        <button onclick="play()">play</button>
+        <button onclick="pause()">pause</button>
+    </div>`
+    let showResults = document.querySelector(".search-item");
     showResults.innerHTML = string;
+
     yt = ytid;
     musicPlayer();
     // getLyrics(url);
