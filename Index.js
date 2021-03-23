@@ -1,3 +1,6 @@
+// $(document).ready(function(){
+  
+// });
 let ResultList = [];
 
 
@@ -27,15 +30,30 @@ async function search(search) {
     const title = element.result.title;
     const ArtistName = element.result.primary_artist.name;
     const url = element.result.url;
+    const img = element.result.header_image_thumbnail_url;
+    const pgwiews = element.result.stats.pageviews;
+    const videoId = element.result.id
     console.log(`${i + 1}: ${title} by ${ArtistName}`);
-    ResultList.push({title: title, artist: ArtistName, url: url});
+    ResultList.push({title: title, artist: ArtistName, 
+      url: url, img: img, wiews: pgwiews, vidId: videoId});
   });
   sendToSite()
 }
 function sendToSite() {
     let stringList = "";
     ResultList.forEach(element => {
-        stringList+=(`<a href="${element.url}">${element.title} by ${element.artist}</a>`)
+        stringList+=(`
+        <div class="search-item">
+        <img src="${element.img}" alt="cover image" href="${element.url}">
+        <div>
+          <h1>${element.title}</h1>
+          <h4>Artist: ${element.artist}</h4>
+          <p>pagewiews: ${element.wiews}</p>
+          <br>
+          <div class="item">Go to song --></div><br>
+          <a href="${element.url}">Go to song on genuios --></a>
+        </div>
+      </div>`)
     });
     let showResults = document.querySelector("#ResultList");
     while (showResults.firstChild) showResults.removeChild(showResults.firstChild);
@@ -45,10 +63,39 @@ function sendToSite() {
     else {
         showResults.innerHTML = (stringList)
     }
+    // console.log($("#ResultList .search-item").length);
+    $(".item").click(async function() {
+      var id = $(this).parent().parent().index();
+      const item = ResultList[id].vidId
+      await localStorage.setItem('videoId', item);
+      window.location.href = "lyrics.html";
+    });
+
 }
 
+ // 2. This code loads the IFrame Player API code asynchronously.
+ var tag = document.createElement('script');
 
+ tag.src = "https://www.youtube.com/iframe_api";
+ var firstScriptTag = document.getElementsByTagName('script')[0];
+ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+ // 3. This function creates an <iframe> (and YouTube player)
+ //    after the API code downloads.
+ var player;
+ function onYouTubeIframeAPIReady() {
+   player = new YT.Player('player', {
+     height: '390',
+     width: '640',
+     videoId: 'QMokMQ8Bu7Y'
+   });
+ }
+function play() {
+  player.playVideo();
+}
+function pause() {
+  player.pauseVideo();
+}
 
 
 // const AudioContext = window.AudioContext || window.webkitAudioContext;
