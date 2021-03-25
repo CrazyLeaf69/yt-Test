@@ -65,10 +65,10 @@ function sendToSite() {
     }
     // console.log($("#ResultList .search-item").length);
     $(".item").click(async function() {
-      var id = $(this).parent().parent().index();
-      const item = ResultList[id].vidId
-      await localStorage.setItem('videoId', item);
-      window.location.href = "lyrics.html";
+      var i = $(this).parent().parent().index();
+      const item = ResultList[i].vidId
+      // await localStorage.setItem('videoId', item);
+      window.location.href = `lyrics.html?song=${item}`;
     });
 
 }

@@ -1,9 +1,30 @@
 let yt;
 $(document).ready(async function(){
-  const videoId = localStorage.getItem('videoId')
+  const videoId = window.location.search.split('=')[1];
   console.log(videoId);
-  getSong(videoId)
+  await getSong(videoId)
   document.getElementById('target').appendChild( document.getElementById('to_be_moved') )
+
+  Timer = setInterval(() => {
+    timer()
+  }, 1000);
+
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("time");
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+    clearInterval(Timer);
+  }
+  slider.onchange = function() {
+    player.seekTo(slider.value);
+    Timer = setInterval(() => {
+      timer()
+    }, 1000);
+  }
+  setTimeout(() => {
+    var i = duration = player.getDuration()
+    $(".slider").attr('max', i)
+  }, 3000);
 });
 
 async function getSong(id) {
@@ -22,18 +43,23 @@ async function getSong(id) {
       }
     });
     console.log(ytid);
+    // console.log(player.getDuration());
     const string = `
-    <img src="${img}" alt="cover image">
-    <div>
-        <h1>${title}</h1>
-        <button onclick="play()">play</button>
-        <button onclick="pause()">pause</button>
+    <div class="search-item">
+      <img src="${img}" alt="cover image">
+      <div>
+          <h1>${title}</h1>
+          <button onclick="play()">play</button>
+          <button onclick="pause()">pause</button>
+          <p>Time: <span id="time"></span></p>
+          <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+      </div>
     </div>`
-    let showResults = document.querySelector(".search-item");
+    let showResults = document.querySelector("#song");
     showResults.innerHTML = string;
-
     yt = ytid;
     musicPlayer();
+
     // getLyrics(url);
 }
 
@@ -71,4 +97,12 @@ function play() {
 }
 function pause() {
  player.pauseVideo();
+}
+
+function timer() {
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("time");
+  const i = parseInt(player.getCurrentTime())
+  slider.value = i
+  output.innerHTML = i;
 }
