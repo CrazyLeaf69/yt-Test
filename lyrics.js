@@ -52,7 +52,7 @@ async function getSong(id) {
           <button onclick="play()">play</button>
           <button onclick="pause()">pause</button>
           <p>Time: <span id="time"></span></p>
-          <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+          <input type="range" min="0" max="100" value="0" class="slider" id="myRange">
       </div>
     </div>`
     let showResults = document.querySelector("#song");
