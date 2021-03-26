@@ -1,12 +1,15 @@
-// $(document).ready(function(){
-  
-// });
+$(document).ready(function(){
+  var $this = document.querySelector("input");
+    if ($this.value.length > 0) {
+      const val = $this.value;
+      search(val)
+    }
+});
 let ResultList = [];
 
 
 $('input').on('input', function(e){
     var $this = $(this);
-
     clearTimeout($this.data('timeout'));
 
     $this.data('timeout', setTimeout(function(){
@@ -14,6 +17,23 @@ $('input').on('input', function(e){
         const val = document.querySelector("input").value;
         search(val)
     }, 500));
+    // if ($this.value.length == 3) {
+    //   ResultList = [];
+    //   const val = $this.value;
+    //   search(val)
+    // }
+});
+$('#myBtn').on('click', function(e){
+  var $this = document.querySelector("input");
+  console.log($this.value.length);
+  ResultList = [];
+  const val = $this.value;
+  search(val)
+});
+document.addEventListener('keydown', function (event) {
+  if (event.keyCode == 13) {
+    $("#myBtn").click();
+  }
 });
 
 async function search(search) {
@@ -30,11 +50,17 @@ async function search(search) {
     const title = element.result.title;
     const ArtistName = element.result.primary_artist.name;
     const url = element.result.url;
-    const img = element.result.header_image_thumbnail_url;
+    // picture sorting
+    const songURL = element.result.song_art_image_thumbnail_url
+    const picZize = songURL.split(".")[songURL.split(".").length-2]
+    const midleX = parseInt(picZize.split("x")[1])
+    const img = (midleX<320 && midleX>280 && midleX != NaN) ? songURL : "noimage.jpg" ;
+    // ---------------------
     const pgwiews = element.result.stats.pageviews;
     const videoId = element.result.id
     console.log(`${i + 1}: ${title} by ${ArtistName}`);
-    ResultList.push({title: title, artist: ArtistName, 
+    ResultList.push({
+      title: title, artist: ArtistName, 
       url: url, img: img, wiews: pgwiews, vidId: videoId});
   });
   sendToSite()
@@ -44,16 +70,17 @@ function sendToSite() {
     ResultList.forEach(element => {
         stringList+=(`
         <div class="search-item">
-        <img src="${element.img}" alt="cover image" href="${element.url}">
-        <div>
-          <h1>${element.title}</h1>
-          <h4>Artist: ${element.artist}</h4>
-          <p>pagewiews: ${element.wiews}</p>
-          <br>
-          <div class="item">Go to song --></div><br>
-          <a href="${element.url}">Go to song on genuios --></a>
+          <img src="${element.img}" alt="cover image" href="${element.url}">
+          <div class="info">
+            <h1>${element.title}</h1>
+            <h4>Artist: ${element.artist}</h4>
+            <p>pagewiews: ${element.wiews}</p>
+            <br>
+            <div class="gotolyrics">Go to song --></div><br>
+            <a href="${element.url}">Go to song on genuios --></a>
+          </div>
         </div>
-      </div>`)
+        `)
     });
     let showResults = document.querySelector("#ResultList");
     while (showResults.firstChild) showResults.removeChild(showResults.firstChild);
@@ -64,7 +91,7 @@ function sendToSite() {
         showResults.innerHTML = (stringList)
     }
     // console.log($("#ResultList .search-item").length);
-    $(".item").click(async function() {
+    $(".gotolyrics").click(function() {
       var i = $(this).parent().parent().index();
       const item = ResultList[i].vidId
       // await localStorage.setItem('videoId', item);
@@ -89,10 +116,10 @@ function sendToSite() {
      width: '640',
      videoId: 'QMokMQ8Bu7Y'
    });
- }
+ };
 function play() {
   player.playVideo();
-}
+};
 function pause() {
   player.pauseVideo();
 };

@@ -9,6 +9,7 @@
 
     <script src="test.js"></script>
 
+    <script src="https://kit.fontawesome.com/70fb894d64.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -38,11 +39,20 @@
         <div id="target" class="lyrics">
         </div>
     </div>
-        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-        <div id="player"></div>
-        <!-- <iframe class="MusicPlayer" style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/QMokMQ8Bu7Y?version=3&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-    <!-- jQuery library -->
+
+      <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+      <div id="player"></div>
     
+    <footer class="text-center text-lg-start fixed-bottom mediaPlayer">
+      <div class="content">
+        <i class="fas fa-play fa-lg" id="playAndPause"></i>
+        <i><span id="time">time</span></i>
+        <input type="range" min="0" max="100" step="0.1" value="0" class="slider" id="myRange">
+        <i class="totDuration">duration</i>
+      </div> 
+    </footer>
+
+      <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- egen javascript -->

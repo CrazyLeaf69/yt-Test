@@ -20,29 +20,107 @@ nav {
 .logo {
     margin-top: -70px;
 }
-.search-item {
-display: flex;
-border-radius: 20px;
-background-color: #3AFFB0;
-padding: 20px;
-margin-bottom: 20px;
+h3.headtext {
+    text-align: center;
+    border-bottom: 3px solid black;
+    padding: 30px;
 }
+#input {
+    margin-top: 20px;
+    width: 30%;
+    border: none;
+    border-bottom: 3px dotted black;
+    outline: none;
 
-.search-item > div {
-/* background-color: #f1f1f1; */
-margin-left: 20px;
 }
-/* #song {
+#myBtn {
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: rgb(235, 235, 235);
+}
+#myBtn:hover {
+    /* transform: translateY(-0.2vh); */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+#myBtn:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.search-item {
     display: flex;
     border-radius: 20px;
     background-color: #3AFFB0;
     padding: 20px;
     margin-bottom: 20px;
-    }
-    
-    #song > div {
-    margin-left: 20px;
-    } */
+}
+
+.search-item > div.info {
+margin-left: 20px;
+}
+.search-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.gotolyrics {
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    width: 125px;
+    text-align: center;
+}
+.gotolyrics:hover {
+    cursor: pointer;
+}
+
 #player {
     display: none;
+}
+.mediaPlayer {
+    width: 50% !important;
+    height: 70px;
+    margin: auto;
+    margin-bottom: 40px;
+    background-color: #3AFFB0;
+    border-radius: 50px;
+}
+.content {
+    margin-top: 25px;
+}
+/* .slider {
+    width: 70%;
+    margin-left: 5px; margin-right: 5px;
+} */
+.slider {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 10px;
+    border-radius: 5px;  
+    background: #ffffff;
+    outline: none;
+    background: linear-gradient(to right, #82CFD0 0%, #82CFD0 0%, #fff 0%, #fff 100%);
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: black;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+  }
+#playAndPause {
+    margin-left: -50px;
+}
+#time {
+    margin-left: 50px;
+}
+.rg_embed.music{
+    margin-bottom: 100px;
 }
