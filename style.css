@@ -20,6 +20,15 @@ nav {
 .logo {
     margin-top: -70px;
 }
+.container {
+    max-width: 100%;
+}
+
+@media (min-width: 992px) {
+  	.container {
+    	max-width: 960px;
+  	}
+}
 h3.headtext {
     text-align: center;
     border-bottom: 3px solid black;
@@ -74,20 +83,22 @@ margin-left: 20px;
     display: none;
 }
 .mediaPlayer {
-    width: 50% !important;
+    max-width: 100%;
     height: 70px;
     margin: auto;
     margin-bottom: 40px;
     background-color: #3AFFB0;
     border-radius: 50px;
+    /* border: red solid 2px; */
+}
+@media (min-width: 992px) {
+  	.mediaPlayer {
+    	max-width: 960px;
+  	}
 }
 .content {
     margin-top: 25px;
 }
-/* .slider {
-    width: 70%;
-    margin-left: 5px; margin-right: 5px;
-} */
 .slider {
     -webkit-appearance: none;
     width: 70%;
@@ -96,6 +107,7 @@ margin-left: 20px;
     background: #ffffff;
     outline: none;
     background: linear-gradient(to right, #82CFD0 0%, #82CFD0 0%, #fff 0%, #fff 100%);
+    /* border: red solid 2px; */
   }
   
   .slider::-webkit-slider-thumb {
@@ -116,11 +128,14 @@ margin-left: 20px;
     cursor: pointer;
   }
 #playAndPause {
-    margin-left: -50px;
+    /* border: red solid 2px; */
+    margin-left: 10px;
 }
 #time {
-    margin-left: 50px;
+    margin-left: 20px;
+    /* border: red solid 2px; */
 }
 .rg_embed.music{
     margin-bottom: 100px;
+    /* border: red solid 2px; */
 }
