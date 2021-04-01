@@ -17,6 +17,9 @@ nav {
     text-decoration: none;
     color: black;
 }
+.active {
+    border-bottom: 3px solid black;
+}
 .logo {
     margin-top: -70px;
 }
@@ -34,18 +37,26 @@ h3.headtext {
     border-bottom: 3px solid black;
     padding: 30px;
 }
+#inputssss {
+    text-align: left;
+}
+@media (max-width: 600px) {
+    #inputssss {
+        text-align: center;
+    }
+}
 #input {
+    width: 80%;
     margin-top: 20px;
-    width: 30%;
     border: none;
     border-bottom: 3px dotted black;
     outline: none;
-
 }
-#myBtn {
+#searchButton {
     border-radius: 5px;
     margin-left: 10px;
     background-color: rgb(235, 235, 235);
+    padding: 7px;
 }
 #myBtn:hover {
     /* transform: translateY(-0.2vh); */
@@ -139,3 +150,18 @@ margin-left: 20px;
     margin-bottom: 100px;
     /* border: red solid 2px; */
 }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }

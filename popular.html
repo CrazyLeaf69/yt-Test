@@ -2,11 +2,6 @@
 <html>
   <head>
     <title>LyricsFlow</title>
-    <meta charset="utf-8">
-    <meta name="description" content="search for lyrics">
-    <meta name="keywords" content="LyricsFlow, Lyrics">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
 
@@ -19,10 +14,9 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a href="index.html" class="link navbar-brand active">Home</a>
-          <a href="popular.html" class="link navbar-brand">Popular</a>
+          <a href="index.html" class="link navbar-brand">Home</a>
+          <a href="popular.html" class="link navbar-brand active">Popular</a>
           <a href="" class="link navbar-brand">About</a>
-          <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
         </div>
         <div class="nav navbar-default">
           <button>register</button>
@@ -31,30 +25,58 @@
       </div>
     </nav>
     
-    <header class="jumbotron jumbotron-fluid">
+    <header class="jumbotron">
       <img src="logo 1.png" alt="LyricsFlow Logo" class="logo">
 
     </header>
     <!-- <h3>Have you ever heard a song and thought to yourself, what are they actually singing? LyricsFlow is a site where you can lock up a lyrics by searching for it or its artist or even a line in the lyrics</h3> -->
     <div class="container">
-      <h3 class="headtext">Search for a song, artist or a line in the lyrics</h3>
-      <div class="col-12 col-sm-9 col-lg-9" id="inputssss">
-        <input id="input" class="input-lg" type="text" placeholder="Search for a lyrics...">
-        <button id="searchButton" type="button"><i class="fas fa-search fa-lg"></i></button>
-      </div>
-      <br><br>
-      <div id="ResultList"></div>
+        <button onclick="test()">click</button>
+        <table id="myDIV">
+            <tr>
+              <th>Type</th>
+              <th>Genre</th>
+              <th>Time</th>
+            </tr>
+            <tr>
+              <td><button>Songs</button></td>
+              <td><button>All</button></td>
+              <td><button>Day</button></td>
+            </tr>
+            <tr>
+              <td><button>Albums</button></td>
+              <td><button>Rap</button></td>
+              <td><button>Week</button></td>
+            </tr>
+            <tr>
+              <td><button>Artists</button></td>
+              <td><button>Pop</button></td>
+              <td><button>Month</button></td>
+            </tr>
+            <tr>
+              <td><button>Lyrics</button></td>
+              <td><button>R&B</button></td>
+              <td><button>All Time</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><button>Rock</button></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><button>Country</button></td>
+              <td></td>
+            </tr>
+          </table>
+          <div class="fetch"></div>
     </div>
-
-      <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-      <div id="player"></div>
-      <!-- <iframe class="MusicPlayer" style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/QMokMQ8Bu7Y?version=3&enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
     
       <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- egen javascript -->
-    <script src="Index.js"></script>
+    <script src="popular.js"></script>
 
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
