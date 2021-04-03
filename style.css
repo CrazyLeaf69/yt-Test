@@ -5,28 +5,39 @@ body {
 .jumbotron {
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     background-color:#3AFFB0;
-    height: 150px;
+    margin-bottom:  1rem;
+    /* height: 150px; */
+}
+@media (min-width: 0) {
+    .jumbotron.jumbotron-fluid {
+      padding-bottom: 30px;
+      padding-top: 0;
+  }
 }
 nav {
     background-color: #3AFFB0;  
 }
 .link {
-    text-decoration: none;
+    text-decoration: none;  
     color: black;
 }
 .active {
     border-bottom: 3px solid black;
 }
 .logo {
-    margin-top: -70px;
+    width: 90%;
+}
+@media (min-width: 400px) {
+    .logo {
+      width: 65%;
+    }
 }
 .container {
     max-width: 100%;
 }
-
 @media (min-width: 992px) {
   	.container {
     	max-width: 960px;
@@ -35,7 +46,7 @@ nav {
 h3.headtext {
     text-align: center;
     border-bottom: 3px solid black;
-    padding: 30px;
+    padding-bottom: 20px;
 }
 #inputssss {
     text-align: left;
@@ -72,6 +83,7 @@ h3.headtext {
     background-color: #3AFFB0;
     padding: 20px;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .search-item > div.info {
@@ -79,6 +91,10 @@ margin-left: 20px;
 }
 .search-item:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.search-item img {
+    width: 40%;
+    height: 50%;
 }
 .gotolyrics {
     background-color: rgb(230, 230, 230);
