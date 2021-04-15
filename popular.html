@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LyricsFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://kit.fontawesome.com/70fb894d64.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="index.html" class="link navbar-brand">Home</a>
+            <a href="popular.html" class="link navbar-brand active">Popular</a>
+            <a href="" class="link navbar-brand">About</a>
+            <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+          </div>
+          <!-- <div class="nav navbar-default">
+            <button>register</button>
+            <button>Log in</button>
+          </div> -->
+        </div>
+      </nav>
+
+      <div class="jumbotron jumbotron-fluid">
+        <img src="./images/logo 1.png" alt="LyricsFlow Logo" class="logo">
+      </div>
+    </header>
+    <!-- <h3>Have you ever heard a song and thought to yourself, what are they actually singing? LyricsFlow is a site where you can lock up a lyrics by searching for it or its artist or even a line in the lyrics</h3> -->
+    <div class="container">
+          <button onclick="toggle()" class="toggle">Songs/All Genres/Today</button>
+          <table id="table">
+              <tr>
+                <th class="bl bt" id="1">Type</th>
+                <th class="bt" id="2">Genre</th>
+                <th class="br bt" id="3">Time</th>
+              </tr>
+              <tr>
+                <td class="bl" id="1"><button class="chart_btn">Songs</button></td>
+                <td class="" id="2"><button class="chart_btn">All</button></td>
+                <td class="br" id="3"><button class="chart_btn">Day</button></td>
+              </tr>
+              <tr>
+                <td class="bl" id="1"><button class="chart_btn">Albums</button></td>
+                <td class="" id="2"><button class="chart_btn">Rap</button></td>
+                <td class="br" id="3"><button class="chart_btn">Week</button></td>
+              </tr>
+              <tr>
+                <td class="bl" id="1"><button class="chart_btn">Artists</button></td>
+                <td class="" id="2"><button class="chart_btn">Pop</button></td>
+                <td class="br" id="3"><button class="chart_btn">Month</button></td>
+              </tr>
+              <tr>
+                <td class="bl" id="1"><button class="chart_btn">Lyrics</button></td>
+                <td class="" id="2"><button class="chart_btn">R&B</button></td>
+                <td class="br" id="3"><button class="chart_btn">All_Time</button></td>
+              </tr>
+              <tr>
+                <td class="bl" id="1"></td>
+                <td class="" id="2"><button class="chart_btn">Rock</button></td>
+                <td class="br" id="3"></td>
+              </tr>
+              <tr>
+                <td class="bl bb"></td>
+                <td class="bb" id="2"><button class="chart_btn">Country</button></td>
+                <td class="br bb"></td>
+              </tr>
+          </table>
+
+          <table class="popularList">
+            <tbody class="popularItem">
+                <tr>
+                    <td class="nm">1</th>
+                    <td class="thumbnail fonts"><img style="text-align: left;" src="https://images.genius.com/4164dff756ddd455675789bd67fe5f1a.300x300x1.png" alt="song image" width="50px" height="50px"></th>
+                    <td class="ellipsis fonts" style="width: 26%;"><span class="title">title</span></td>
+                    <td class="ellipsis fonts" style="width: 26%;"><span class="artist">artist</span></td>
+                    <td class="ellipsis fonts"><span style="text-align: right;">views</span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+    
+      <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- egen javascript -->
+    <script src="popular.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+
+<!-- <audio controls>
+      <source src="https://www.youtube.com/watch?v=o2-PW3Cbdio" type="audio/mpeg">
+    </audio> -->
+
+    <!-- if i want to have so that you can listen to the song 
+    in the lyrics page i can find the song id and call a new 
+    fetch with api/genius.com/songs/(songid)and find the youtube link.
+    then find youtube id
+    then do this:
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/(youtube id)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->

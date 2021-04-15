@@ -2,36 +2,39 @@
 <html>
   <head>
     <title>LyricsFlow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
 
     <link rel="stylesheet" href="style.css" />
 
-    <script src="test.js"></script>
+    <script src="YTEmbed.js"></script>
 
     <script src="https://kit.fontawesome.com/70fb894d64.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a href="" class="link navbar-brand">Home</a>
-          <a href="" class="link navbar-brand">Popular</a>
-          <a href="" class="link navbar-brand">About</a>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="index.html" class="link navbar-brand active">Home</a>
+            <a href="popular.html" class="link navbar-brand">Popular</a>
+            <a href="" class="link navbar-brand">About</a>
+            <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+          </div>
+          <!-- <div class="nav navbar-default">
+            <button>register</button>
+            <button>Log in</button>
+          </div> -->
         </div>
-        <div class="nav navbar-default">
-          <button>register</button>
-          <button>Log in</button>
-        </div>
+      </nav>
+
+      <div class="jumbotron jumbotron-fluid">
+        <img src="./Images/logo 1.png" alt="LyricsFlow Logo" class="logo">
       </div>
-    </nav>
-    
-    <header class="jumbotron">
-      <img src="logo 1.png" alt="LyricsFlow Logo" class="logo">
-
     </header>
-
+    
     <div class="container">
         <div id="song"></div>
         <div id="target" class="lyrics"></div>

@@ -54,7 +54,7 @@ async function search(search) {
     const songURL = element.result.song_art_image_thumbnail_url
     const picZize = songURL.split(".")[songURL.split(".").length-2]
     const midleX = parseInt(picZize.split("x")[1])
-    const img = (midleX<320 && midleX>280 && midleX != NaN) ? songURL : "noimage.jpg" ;
+    const img = (midleX<320 && midleX>280 && midleX != NaN) ? songURL : "./images/noimage.jpg" ;
     // ---------------------
     const pgwiews = element.result.stats.pageviews;
     const videoId = element.result.id
