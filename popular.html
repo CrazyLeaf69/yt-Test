@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LyricsFlow</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://kit.fontawesome.com/70fb894d64.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a href="index.html" class="link navbar-brand active">Home</a>
+            <a href="popular.html" class="link navbar-brand">Popular</a>
+            <a href="" class="link navbar-brand">About</a>
+            <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
+          </div>
+          <!-- <div class="nav navbar-default">
+            <button>register</button>
+            <button>Log in</button>
+          </div> -->
+        </div>
+      </nav>
+
+      <div class="jumbotron jumbotron-fluid">
+        <img src="logo 1.png" alt="LyricsFlow Logo" class="logo">
+      </div>
+    </header>
+    <!-- <h3>Have you ever heard a song and thought to yourself, what are they actually singing? LyricsFlow is a site where you can lock up a lyrics by searching for it or its artist or even a line in the lyrics</h3> -->
+    <div class="container">
+        <button onclick="test()">click</button>
+        <table id="myDIV">
+            <tr>
+              <th>Type</th>
+              <th>Genre</th>
+              <th>Time</th>
+            </tr>
+            <tr>
+              <td><button>Songs</button></td>
+              <td><button>All</button></td>
+              <td><button>Day</button></td>
+            </tr>
+            <tr>
+              <td><button>Albums</button></td>
+              <td><button>Rap</button></td>
+              <td><button>Week</button></td>
+            </tr>
+            <tr>
+              <td><button>Artists</button></td>
+              <td><button>Pop</button></td>
+              <td><button>Month</button></td>
+            </tr>
+            <tr>
+              <td><button>Lyrics</button></td>
+              <td><button>R&B</button></td>
+              <td><button>All Time</button></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><button>Rock</button></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><button>Country</button></td>
+              <td></td>
+            </tr>
+          </table>
+          <div class="fetch"></div>
+    </div>
+    
+      <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- egen javascript -->
+    <script src="popular.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+
+
+<!-- <audio controls>
+      <source src="https://www.youtube.com/watch?v=o2-PW3Cbdio" type="audio/mpeg">
+    </audio> -->
+
+    <!-- if i want to have so that you can listen to the song 
+    in the lyrics page i can find the song id and call a new 
+    fetch with api/genius.com/songs/(songid)and find the youtube link.
+    then find youtube id
+    then do this:
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/(youtube id)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
