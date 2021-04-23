@@ -222,6 +222,11 @@ margin-left: 20px;
     /* border: 1px solid #dddddd; */
     border-bottom: 1px solid #dddddd;
 }
+@media (min-width: 900px) {
+    .popularItem td {
+        font-size: 1.75rem;
+    }
+}
 .popularItem .nm {
     font-size: 2rem;
     width: 8%;
