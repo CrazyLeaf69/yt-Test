@@ -1,0 +1,444 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#3AFFB0;
+    margin-bottom:  1rem;
+    /* height: 150px; */
+}
+@media (min-width: 0) {
+    .jumbotron.jumbotron-fluid {
+      padding-bottom: 30px;
+      padding-top: 0;
+  }
+}
+nav {
+    background-color: #3AFFB0;  
+}
+.link {
+    text-decoration: none;  
+    color: black;
+}
+.active {
+    border-bottom: 3px solid black;
+}
+.logo {
+    width: 90%;
+}
+@media (min-width: 400px) {
+    .logo {
+      width: 45%;
+    }
+}
+.container {
+    max-width: 100%;
+}
+@media (min-width: 992px) {
+  	.container {
+    	max-width: 960px;
+  	}
+}
+h3.headtext {
+    text-align: center;
+    border-bottom: 3px solid black;
+    padding-bottom: 20px;
+}
+#inputssss {
+    text-align: left;
+}
+@media (max-width: 600px) {
+    #inputssss {
+        text-align: center;
+    }
+}
+#input {
+    width: 80%;
+    margin-top: 20px;
+    border: none;
+    border-bottom: 3px dotted black;
+    outline: none;
+}
+#searchButton {
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: rgb(235, 235, 235);
+    padding: 7px;
+}
+#myBtn:hover {
+    /* transform: translateY(-0.2vh); */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+#myBtn:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.search-item {
+    display: flex;
+    border-radius: 20px;
+    background-color: #3AFFB0;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.search-item > div.info {
+margin-left: 20px;
+}
+.search-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.search-item img {
+    width: 40%;
+    height: 50%;
+}
+.gotolyrics {
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    width: 125px;
+    text-align: center;
+}
+.gotolyrics:hover {
+    cursor: pointer;
+}
+
+#player {
+    display: none;
+}
+.mediaPlayer {
+    max-width: 100%;
+    height: 70px;
+    margin: auto;
+    margin-bottom: 40px;
+    background-color: #3AFFB0;
+    border-radius: 50px;
+    /* border: red solid 2px; */
+}
+@media (min-width: 992px) {
+  	.mediaPlayer {
+    	max-width: 960px;
+  	}
+}
+.content {
+    margin-top: 25px;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 70%;
+    height: 10px;
+    border-radius: 5px;  
+    background: #ffffff;
+    outline: none;
+    background: linear-gradient(to right, #82CFD0 0%, #82CFD0 0%, #fff 0%, #fff 100%);
+    /* border: red solid 2px; */
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: black;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+  }
+#playAndPause {
+    /* border: red solid 2px; */
+    margin-left: 10px;
+}
+#time {
+    margin-left: 20px;
+    /* border: red solid 2px; */
+}
+.rg_embed.music{
+    margin-bottom: 100px;
+    /* border: red solid 2px; */
+}
+.toggle {
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    margin-bottom: 5px; 
+}
+#table {
+    font-size: 1rem;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 28%;
+    margin-left: 37.5%;
+}
+@media (max-width: 600px) {
+    #table {
+        margin-left: 17.5%;
+    }
+}
+  
+#table td, th {
+    table-layout: fixed;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+    overflow: hidden;
+}
+.bl {
+    border-left: 2px solid black !important;
+}
+.br {
+    border-right: 2px solid black !important;
+}
+.bt {
+    border-top: 2px solid black !important;
+}
+.bb {
+    border-bottom: 2px solid black !important;
+}
+.chart_btn {
+    padding: 0;
+    margin: 4px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.chart_btn:focus {
+  outline: none;
+}
+
+.popularList {
+    width: 100%;
+}
+.popularItem td {
+    /* border: 1px solid #dddddd; */
+    border-bottom: 1px solid #dddddd;
+}
+.popularItem .nm {
+    font-size: 2rem;
+    width: 8%;
+}
+.thumbnail {
+    width: 10%;
+}
+.title {
+    padding-right: 1rem;
+}
+.ellipsis {
+    position: relative;
+}
+.ellipsis:before {
+    content: '&nbsp;';
+    visibility: hidden;
+}
+.ellipsis span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.fonts {
+    font-size: 3vw;
+    /* font-size: 1.6rem; */
+    font-weight: 300;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3AFFB0;
+    color: white;
+    text-align: center;
+    color: black;
+    display: block;
+    font-family: 'Orelega One', cursive;
+ }
+ .footer p {
+     margin: 5px;
+ }
+
+
+/* kopierat från https://www.freecontactform.com/form-guides/html-email-form#htmlform */
+#fcf-form {
+    display:block;
+}
+
+.fcf-body {
+    margin: 0;
+    font-family: -apple-system, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    padding: 30px;
+    padding-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    max-width: 100%;
+}
+
+.fcf-form-group {
+    margin-bottom: 1rem;
+}
+
+.fcf-input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.fcf-form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    outline: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.fcf-form-control:focus {
+    border: 1px solid #313131;
+}
+
+select.fcf-form-control[size], select.fcf-form-control[multiple] {
+    height: auto;
+}
+
+textarea.fcf-form-control {
+    font-family: -apple-system, Arial, sans-serif;
+    height: auto;
+}
+
+label.fcf-label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.fcf-credit {
+    padding-top: 10px;
+    font-size: 0.9rem;
+    color: #545b62;
+}
+
+.fcf-credit a {
+    color: #545b62;
+    text-decoration: underline;
+}
+
+.fcf-credit a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.fcf-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fcf-btn {
+        transition: none;
+    }
+}
+
+.fcf-btn:hover {
+    color: #212529;
+    text-decoration: none;
+}
+
+.fcf-btn:focus, .fcf-btn.focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.fcf-btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.fcf-btn-primary:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.fcf-btn-primary:focus, .fcf-btn-primary.focus {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+.fcf-btn-lg, .fcf-btn-group-lg>.fcf-btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+}
+
+.fcf-btn-block {
+    display: block;
+    width: 100%;
+}
+
+.fcf-btn-block+.fcf-btn-block {
+    margin-top: 0.5rem;
+}
+
+input[type="submit"].fcf-btn-block, input[type="reset"].fcf-btn-block, input[type="button"].fcf-btn-block {
+    width: 100%;
+}
+/* till hit */
+
+#aboutText {
+    margin-top: 40px;
+    font-family: 'Domine', serif;
+}
+.ContactBorder {
+    margin-top: 40px;
+    padding-top: 10px;
+    border-top: dotted 2px black;
+    font-family: 'Orelega One', cursive;
+}
