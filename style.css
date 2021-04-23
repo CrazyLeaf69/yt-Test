@@ -218,17 +218,20 @@ margin-left: 20px;
 .popularList {
     width: 100%;
 }
+.popularItem tr {
+    padding-top: 20px;
+}
 .popularItem td {
     /* border: 1px solid #dddddd; */
     border-bottom: 1px solid #dddddd;
 }
 @media (min-width: 900px) {
     .popularItem td {
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 }
 .popularItem .nm {
-    font-size: 2rem;
+    font-size: 1.75rem;
     width: 8%;
 }
 .thumbnail {
