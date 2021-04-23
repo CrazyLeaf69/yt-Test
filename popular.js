@@ -14,7 +14,7 @@ $(document).ready(async function(){
 });
 async function songs() {
   let resultList = []
-  let response = await fetch("/popular.json")
+  let response = await fetch("popular.json")
   let data = await response.json();
   data.response.chart_items.forEach(element => {
     const title = element.item.title;
