@@ -1,0 +1,50 @@
+// exempel av Promise All Kan vara användbart i framtiden
+
+$(document).ready(async function(){
+  test();
+  setTimeout(() => {
+    var res = results.sort(({views:a}, {views:b}) => b-a);
+    console.log(res); 
+  }, 3000);
+});
+
+async function test() {
+  let response = await fetch(`https://en.wikipedia.org/wiki/List_of_most-streamed_artists_on_Spotify`);
+  let data = await response.json();
+  console.log(data);
+} 
+var token = "gqefLsr-j3RSR4AHtaEkdQ_UAoDhcUudk0qnYJzxKBYZiLmie3xcDrFg5oC-qVoD";
+
+let i=1;
+let Promises = [];
+while (i < 10) {
+  Promises.push( fetch(`https://api.genius.com/songs/${i}?access_token=${token}`) );
+  i++;
+}
+
+Promise.all( Promises )
+.then( files => {
+  files.forEach(file=>{
+    process ( file.json() )
+  })
+})
+.catch(err=>{
+
+});
+let results = [];
+let process = (prom) => {
+  prom.then(data=>{
+    if (data.meta.status == 200) {
+      results.push({title: data.response.song.full_title, views: data.response.song.stats.pageviews})
+    }
+  })
+}
+
+function test() {
+    var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
