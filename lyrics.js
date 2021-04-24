@@ -25,7 +25,7 @@ $(document).ready(async function(){
   }
   setTimeout(() => {
     var DurationInSeconds = player.getDuration()
-    var FancyDuration = fancyTimeFormat(player.getDuration())
+    var FancyDuration = fancyTimeFormat(DurationInSeconds)
     $(".slider").attr('max', DurationInSeconds)
     $(".totDuration").text(FancyDuration)
   }, 3000);
